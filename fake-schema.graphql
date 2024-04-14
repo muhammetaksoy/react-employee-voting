@@ -1,0 +1,19 @@
+type Employee {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  jobTitle: String!
+  photoUrl: String!
+  votes: Int!
+  email: String!
+  address: String!
+  phoneNumber: String!
+}
+
+type Query {
+  employees: [Employee]
+}
+
+type Mutation {
+  addVote(id: ID!): Employee
+}
